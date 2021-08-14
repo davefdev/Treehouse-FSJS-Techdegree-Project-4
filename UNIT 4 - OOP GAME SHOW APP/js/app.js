@@ -3,7 +3,8 @@
  * app.js */
 
 
-  
+
+
 const phrase = new Phrase();
 const game = new Game();
 
@@ -18,18 +19,20 @@ logPhrase(game.getRandomPhrase());
 //set variables
 const startBtn = document.querySelector('#btn__reset');
 const keyboard = document.querySelector('#qwerty');
+let game;
 
 //create eventlisteners for start and onscreen keyboard buttons
-//start new game
+//step 8, add click event listener to the button
 startBtn.addEventListener('click', (e) => {
   //call new instance of game object
   game = new Game();
   //call startGame function
   game.startGame();
-
 });
 
 
 keyboard.addEventListener('click', (e) => {
     game.receiveInt(e.target);
 });
+
+
